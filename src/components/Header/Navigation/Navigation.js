@@ -20,7 +20,7 @@ const navigation = (props) => {
     return(
         <nav className={props.navStyles}>
             <ul>
-                <NavigationItem path="/home">Search</NavigationItem>
+                <NavigationItem path="/home">Deployed</NavigationItem>
                 <NavigationItem path="/movies">Movies</NavigationItem>
                 <NavigationItem path="/tvshows">TV</NavigationItem>
                 <NavigationItem path="/explore">Explore</NavigationItem>
