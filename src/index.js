@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 
 
 // Redux
@@ -51,9 +51,9 @@ let persistor = persistStore(store);
 ReactDOM.render(
     <Provider store={store}>
         <PersistGate loading={<Spinner />} persistor={persistor}>
-            <BrowserRouter>
+            <Router>
                 <App />
-            </BrowserRouter>
+            </Router>
         </PersistGate>
     </Provider>, 
     document.getElementById('root')
