@@ -12,7 +12,7 @@ const listsForm = (props) => {
     let visible = styles.Hide;
     if(props.show) {
         visible = styles.Show;
-    }
+    } 
 
     return (
         <div className={[styles.ListsForm, visible].join(' ')}>

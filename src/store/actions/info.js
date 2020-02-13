@@ -177,7 +177,6 @@ export const removeMedia = (mediaID, listID, sessionID) => {
             }
         })
         .then(res => {
-            console.log(res.data);
             dispatch(removeMediaSuccess(listID, mediaID));
         })
         .catch(err => {
@@ -214,7 +213,6 @@ export const createNewList = (sessionID, name, description) => {
                     listItemS: [],
                     id
                 }
-                console.log();
                 dispatch(createNewListSuccess(res.data.list_id, {[id]: data}));
             })
             .catch(err => {
@@ -277,7 +275,10 @@ export const updateRating = (type, id, value, sessionID, requestType, isGuest) =
                     dispatch(addRating(id, value));
                 } else if(requestType === 'delete'){
                     dispatch(removeRating(id));
-                    dispatch(removeStateMediaSuccess('rated', id, type+'s'));
+                    if(type === 'movie') {
+                        type = 'movies';
+                    }
+                    dispatch(removeStateMediaSuccess('rated', id, type));
                 }
             })
             .catch(err => {
@@ -315,7 +316,10 @@ export const updateMediaState = (accountID, sessionID, mediaType, mediaID, state
                 };
                 dispatch(updateMediaStateSuccess(mediaID, mediaState));
                 if(stateValue) {
-                    dispatch(removeStateMediaSuccess(stateType, mediaID, mediaType+'s'));
+                    if(mediaType === 'movie') {
+                        mediaType = 'movies';
+                    }
+                    dispatch(removeStateMediaSuccess(stateType, mediaID, mediaType));
                 }
             })
             .catch(err => {

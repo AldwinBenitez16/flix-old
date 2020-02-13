@@ -76,7 +76,6 @@ const reducer = (state=initialState, action) => {
                     updatedAccountLists[id].listItems = [];
                 }
             }
-            console.log(updatedAccountLists);
             return {
                 ...state,
                 loading: false,
@@ -151,6 +150,7 @@ const reducer = (state=initialState, action) => {
                 }
             };
         case actionTypes.REMOVE_RATING:
+
             return {
                 ...state,
                 mediaState: {
