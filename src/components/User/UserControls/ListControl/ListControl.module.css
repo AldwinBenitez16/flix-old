@@ -1,0 +1,17 @@
+.ListControl {
+    box-sizing: border-box;
+    padding: 20px;
+    height: 75%;
+    border: 2px solid #1f165c;
+}
+
+.ListControl hr {
+    color: #1f165c;
+    border: none;
+    border: 1px solid #c97793;
+}
+
+.UserControl header {
+    margin: 0;
+    margin-bottom: 10px;
+}

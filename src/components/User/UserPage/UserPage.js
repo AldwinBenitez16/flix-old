@@ -33,7 +33,7 @@ class UserPage extends Component {
                         }}
                         changePage={() => {console.log('change the page man')}}
                         title={title}
-                        page={page}
+                        page={page}  
                         viewInfo={viewInfo}
                         type="movie"
                         stylesType="user"

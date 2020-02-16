@@ -1,0 +1,19 @@
+.UserControl {
+    box-sizing: border-box;
+    width: 100%;
+    border: 2px solid #1f165c;
+    margin-bottom: 5px;
+    padding: 20px;
+    height: calc(15% - 5px);
+}
+
+.UserControl header {
+    color: #1f165c;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.UpdatedButton {
+    height: unset;
+    padding: 10px;
+}

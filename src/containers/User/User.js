@@ -157,15 +157,13 @@ class User extends Component {
                         show={this.state.WatchList.show} >
                         <UserPage />
                     </PageWrapper>
-
                 </Fragment>
             );
         }
         return(
             <div className={styles.User}>
-                <UserControls 
-                   showHandler={this.showHandler} />
-                {user}
+                <UserControls showHandler={this.showHandler} />
+                {/* {user} */}
             </div>
         );
     }
